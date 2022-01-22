@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/ss_neumorphic_background"
+    android:id="@+id/uploadscreenlayout"
+    tools:context=".Fragments.CreateFragment">
+
+    <ImageView
+        android:id="@+id/pickimg"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="15dp"/>
+   <Button
+       android:layout_width="185dp"
+       android:layout_height="58dp"
+       android:layout_marginTop="15dp"
+       android:text="pick image"
+       android:textColor="@android:color/white"
+       android:textSize="17sp"
+       android:textStyle="normal"
+       android:textAllCaps="false"
+       android:id="@+id/pickbtn"
+       app:layout_constraintLeft_toLeftOf="parent"
+       app:layout_constraintRight_toRightOf="parent"
+       app:layout_constraintTop_toBottomOf="@id/pickimg"
+       android:background="@color/darkcyan"
+       />
+
+    <com.simformsolutions.ssneumorphic.component.SSNeumorphicEditText
+        android:layout_width="305.6dp"
+        android:layout_height="78.2dp"
+        android:gravity="center"
+        android:hint="File Name"
+        android:inputType="textEmailAddress"
+        android:textSize="21.1dp"
+        android:drawableLeft="@drawable/filename"
+        android:paddingLeft="18.2dp"
+        android:paddingRight="18.2dp"
+        android:id="@+id/nameedit"
+        android:layout_marginTop="30dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@color/darkcyan"
+        app:layout_constraintTop_toBottomOf="@id/pickbtn"
+        app:ss_neumorphic_shapeType="basin"
+        app:layout_constraintBaseline_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:focusableInTouchMode="true"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+
+
+    <com.simformsolutions.ssneumorphic.component.SSNeumorphicEditText
+        android:layout_width="305.6dp"
+        android:layout_height="78.2dp"
+        android:gravity="center"
+        android:hint="Description"
+        android:inputType="textEmailAddress"
+        android:textSize="21.1dp"
+        android:drawableLeft="@drawable/crudbook"
+        android:paddingLeft="18.2dp"
+        android:paddingRight="18.2dp"
+        android:id="@+id/descedit"
+        android:layout_marginTop="30dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@color/darkcyan"
+        app:layout_constraintTop_toBottomOf="@id/nameedit"
+        app:ss_neumorphic_shapeType="basin"
+        app:layout_constraintBaseline_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:focusableInTouchMode="true"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+
+    <LinearLayout
+        android:layout_width="310dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="25dp"
+        android:background="@color/orangered"
+        app:layout_constraintTop_toBottomOf="@id/descedit"
+        app:layout_constraintBaseline_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/uploadbtn"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/uploadtext"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Upload"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:textSize="22dp"
+            android:visibility="visible"
+            android:layout_gravity="center"/>
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/uploadprogress"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:progressTint="@color/white"
+            android:indeterminate="true"
+            android:layout_gravity="center"
+            android:indeterminateTintMode="src_atop"
+            android:indeterminateTint="@color/white"
+            />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
