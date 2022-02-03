@@ -3,20 +3,17 @@ package com.example.crudbook.Fragments
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.crudbook.R
 import com.example.crudbook.Utils.NavigationUtils.Companion.RegisterScreen
 import com.example.crudbook.databinding.FragmentLoginBinding
-import android.util.Patterns
 import androidx.lifecycle.Observer
 import com.example.crudbook.Activities.MainActivity
 import com.example.crudbook.Network.Status
 import com.example.crudbook.Utils.AppUtils.Companion.DisplayMessage
 import com.example.crudbook.Utils.AppUtils.Companion.hideSoftKeyBoard
-import java.util.regex.Pattern
 
 
 class LoginFragment : BaseFragment() {
@@ -32,7 +29,7 @@ private var binding:FragmentLoginBinding?=null
         // Inflate the layout for this fragment
         binding= FragmentLoginBinding.inflate(inflater, container, false)
         InitTinyDb()
-        InitViewModel()
+        InitAuthViewModel()
         binding!!.regtxtbtn.setOnClickListener { RegisterScreen(requireActivity()) }
 
 

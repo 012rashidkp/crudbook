@@ -2,19 +2,16 @@ package com.example.crudbook.Fragments
 
 import android.os.Bundle
 import android.os.Handler
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import com.example.crudbook.Network.Status
 import com.example.crudbook.R
-import com.example.crudbook.Utils.AppUtils
 import com.example.crudbook.Utils.AppUtils.Companion.DisplayMessage
 import com.example.crudbook.Utils.AppUtils.Companion.hideSoftKeyBoard
 import com.example.crudbook.Utils.NavigationUtils.Companion.LoginScreen
 import com.example.crudbook.databinding.FragmentRegisterBinding
-import kotlinx.android.synthetic.main.fragment_register.*
 
 class RegisterFragment : BaseFragment() {
 private var binding:FragmentRegisterBinding?=null
@@ -25,7 +22,7 @@ private var binding:FragmentRegisterBinding?=null
     ): View? {
         // Inflate the layout for this fragment
       binding= FragmentRegisterBinding.inflate(inflater,container,false)
-        InitViewModel()
+        InitAuthViewModel()
         InitTinyDb()
 
 

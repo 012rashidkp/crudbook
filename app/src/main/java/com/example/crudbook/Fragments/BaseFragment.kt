@@ -16,7 +16,6 @@ import com.example.crudbook.ViewModelFactory.AuthViewModelFactory
 import com.example.crudbook.ViewModelFactory.ItemViewModelFactory
 import java.util.regex.Pattern
 
-
 open class BaseFragment : Fragment() {
 
     lateinit var tinyDb: TinyDb
@@ -31,7 +30,7 @@ open class BaseFragment : Fragment() {
 fun InitTinyDb(){
     tinyDb= TinyDb(requireContext())
 }
-fun InitViewModel(){
+fun InitAuthViewModel(){
     userVieModel= ViewModelProvider(
         this,
         AuthViewModelFactory(ApiHelper(ApiClient.invoke()))
